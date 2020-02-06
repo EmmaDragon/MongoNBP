@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61E84F15-0814-4FCF-A1DD-34EBFC1A5985}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MongoNBP</RootNamespace>
+    <AssemblyName>MongoNBP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entiteti\Admin.cs" />
+    <Compile Include="Entiteti\Korisnik.cs" />
+    <Compile Include="Entiteti\Merenje.cs" />
+    <Compile Include="Entiteti\VremenskaStanica.cs" />
+    <Compile Include="Entiteti\VremenskiParametar.cs" />
+    <Compile Include="Entiteti\Zaposleni.cs" />
+    <Compile Include="Forme\AdminForme\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\AdminForme\LogIn_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\LogIn_Admin.Designer.cs">
+      <DependentUpon>LogIn_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\AdminForme\VremenskaStanicaIzmene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\VremenskaStanicaIzmene.Designer.cs">
+      <DependentUpon>VremenskaStanicaIzmene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\AdminForme\VremenskeStanice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\VremenskeStanice.Designer.cs">
+      <DependentUpon>VremenskeStanice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\AdminForme\ZaposleniIzmene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\ZaposleniIzmene.Designer.cs">
+      <DependentUpon>ZaposleniIzmene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\AdminForme\ZaposleniPodaciIzmena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AdminForme\ZaposleniPodaciIzmena.Designer.cs">
+      <DependentUpon>ZaposleniPodaciIzmena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\DodatneNapomene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\DodatneNapomene.Designer.cs">
+      <DependentUpon>DodatneNapomene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\Eksportovanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\Eksportovanje.Designer.cs">
+      <DependentUpon>Eksportovanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\IzmenaPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\IzmenaPodataka.Designer.cs">
+      <DependentUpon>IzmenaPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\GlavnaStranica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\GlavnaStranica.Designer.cs">
+      <DependentUpon>GlavnaStranica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\GrafickiPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\GrafickiPrikaz.Designer.cs">
+      <DependentUpon>GrafickiPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\KorisnikProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\KorisnikProfil.Designer.cs">
+      <DependentUpon>KorisnikProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\KreiranjeNaloga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\KreiranjeNaloga.Designer.cs">
+      <DependentUpon>KreiranjeNaloga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\LogIn_Korisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\LogIn_Korisnik.Designer.cs">
+      <DependentUpon>LogIn_Korisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KorisnikForme\Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\FormaZaPrikazGranicnihVrednosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\FormaZaPrikazGranicnihVrednosti.Designer.cs">
+      <DependentUpon>FormaZaPrikazGranicnihVrednosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\FormaZaUnosPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\FormaZaUnosPodataka.Designer.cs">
+      <DependentUpon>FormaZaUnosPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\GlavnaStranica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\GlavnaStranica.Designer.cs">
+      <DependentUpon>GlavnaStranica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\GrafickiPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\GrafickiPrikaz.Designer.cs">
+      <DependentUpon>GrafickiPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\LogIn_Zaposleni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\LogIn_Zaposleni.Designer.cs">
+      <DependentUpon>LogIn_Zaposleni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\ZaposleniProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniForme\ZaposleniProfil.Designer.cs">
+      <DependentUpon>ZaposleniProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\AdminForme\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AdminForme\LogIn_Admin.resx">
+      <DependentUpon>LogIn_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AdminForme\VremenskaStanicaIzmene.resx">
+      <DependentUpon>VremenskaStanicaIzmene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AdminForme\VremenskeStanice.resx">
+      <DependentUpon>VremenskeStanice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AdminForme\ZaposleniIzmene.resx">
+      <DependentUpon>ZaposleniIzmene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AdminForme\ZaposleniPodaciIzmena.resx">
+      <DependentUpon>ZaposleniPodaciIzmena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\DodatneNapomene.resx">
+      <DependentUpon>DodatneNapomene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\Eksportovanje.resx">
+      <DependentUpon>Eksportovanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\IzmenaPodataka.resx">
+      <DependentUpon>IzmenaPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\GlavnaStranica.resx">
+      <DependentUpon>GlavnaStranica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\GrafickiPrikaz.resx">
+      <DependentUpon>GrafickiPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\KorisnikProfil.resx">
+      <DependentUpon>KorisnikProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\KreiranjeNaloga.resx">
+      <DependentUpon>KreiranjeNaloga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\LogIn_Korisnik.resx">
+      <DependentUpon>LogIn_Korisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KorisnikForme\Statistika.resx">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\FormaZaPrikazGranicnihVrednosti.resx">
+      <DependentUpon>FormaZaPrikazGranicnihVrednosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\FormaZaUnosPodataka.resx">
+      <DependentUpon>FormaZaUnosPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\GlavnaStranica.resx">
+      <DependentUpon>GlavnaStranica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\GrafickiPrikaz.resx">
+      <DependentUpon>GrafickiPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\LogIn_Zaposleni.resx">
+      <DependentUpon>LogIn_Zaposleni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\Statistika.resx">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniForme\ZaposleniProfil.resx">
+      <DependentUpon>ZaposleniProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

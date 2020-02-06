@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"MongoNBP.korisnik"}],"uuid":"cc4bef35e6d346769dac1eac09ee3964"}
